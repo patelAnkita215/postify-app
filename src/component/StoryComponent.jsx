@@ -1,8 +1,6 @@
 import React from "react";
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
 import StoryModal from "./Modal/StoryModal";
 
 const StoryComponent = () => {

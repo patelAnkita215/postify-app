@@ -1,7 +1,5 @@
-import { Navigation } from 'swiper';
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
 
 const MyWallet = () => {
     return(
@@ -27,45 +25,58 @@ const MyWallet = () => {
                         <h3 className="gray-label">
                           Buy Coins
                         </h3>
-                        <div className="swiper coin-slider">
-                          <div className="swiper-wrapper">
-                            <div className="swiper-slide">
-                              <div className="coin-box">
-                                <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
-                                <p>100 Coins</p>
-                                <p className="price">$1</p>
+                        <Swiper className="coin-slider"
+                            spaceBetween={25}
+                            slidesPerView={'auto'}
+                            onSlideChange={() => console.log("slide change")}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            <SwiperSlide>
+                              <div className="swiper-slide">
+                                <div className="coin-box">
+                                  <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
+                                  <p>100 Coins</p>
+                                  <p className="price">$1</p>
+                                </div>
                               </div>
-                            </div>
-                            <div className="swiper-slide">
-                              <div className="coin-box">
-                                <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
-                                <p>300 Coins</p>
-                                <p className="price">$3</p>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <div className="swiper-slide">
+                                <div className="coin-box">
+                                  <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
+                                  <p>300 Coins</p>
+                                  <p className="price">$3</p>
+                                </div>
                               </div>
-                            </div>
-                            <div className="swiper-slide">
-                              <div className="coin-box">
-                                <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
-                                <p>500 Coins</p>
-                                <p className="price">$5</p>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <div className="swiper-slide">
+                                <div className="coin-box">
+                                  <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
+                                  <p>500 Coins</p>
+                                  <p className="price">$5</p>
+                                </div>
                               </div>
-                            </div>
-                            <div className="swiper-slide">
-                              <div className="coin-box">
-                                <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
-                                <p>1000 Coins</p>
-                                <p className="price">$10</p>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <div className="swiper-slide">
+                                <div className="coin-box">
+                                  <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
+                                  <p>1000 Coins</p>
+                                  <p className="price">$10</p>
+                                </div>
                               </div>
-                            </div>
-                            <div className="swiper-slide">
-                              <div className="coin-box">
-                                <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
-                                <p>100 Coins</p>
-                                <p className="price">$1</p>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <div className="swiper-slide">
+                                <div className="coin-box">
+                                  <img src={require("../../assets/images/icons/dollar.webp")} alt="" className="dollar-sign" />
+                                  <p>100 Coins</p>
+                                  <p className="price">$1</p>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
+                            </SwiperSlide>
+                        </Swiper>
                         <h3 className="gray-label">
                           Transaction History
                         </h3>

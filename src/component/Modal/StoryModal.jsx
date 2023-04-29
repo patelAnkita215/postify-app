@@ -1,6 +1,11 @@
 import React from "react";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 const StoryModal = () => {
+
+    const swiper = useSwiper();
+
     return(
         <>
             <div className="modal fade custom-modal modal-fullscreen-md-down story-modal" id="storyModal" tabIndex="-1"
@@ -32,20 +37,31 @@ const StoryModal = () => {
                             </div>
                         </div>
                         <div className="modal-body p-0">
-                            <div className="swiper story-swiper">
-                                <div className="swiper-wrapper">
+                        <Swiper className="swiper story-swiper"
+                            modules={[Navigation,Pagination]}
+                            navigation={{ 
+                                clickable: true,
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            }}
+                            pagination={{ clickable: true,el: ".swiper-pagination", }}
+                            onSlideChange={() => console.log("slide change")}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            <SwiperSlide>
                                 <div className="swiper-slide">
                                     <img src={require("../../assets/images/imgs/portrait.webp")} className="story-img" alt="" />
                                 </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
                                 <div className="swiper-slide">
                                     <img src={require("../../assets/images/imgs/portrait.webp")} className="story-img" alt="" />
                                 </div>
-                                </div>
-                                <div className="swiper-pagination"></div>
-                            </div>
+                            </SwiperSlide>
+                        </Swiper>
                         </div>
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-button-prev"></div>
+                        <button onClick={() => swiper.slideNext()} className="swiper-button-next"></button>
+                        <button onClick={() => swiper.slidePrev()} className="swiper-button-prev"></button>
                     </div>
                 </div>
             </div>
