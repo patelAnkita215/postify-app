@@ -1,11 +1,13 @@
 import React from "react";
 import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import StoryModal from "./Modal/StoryModal";
 
 const StoryComponent = () => {
+
+  const swiper = useSwiper();
   return (
     <>
       <div className="story-slider">
@@ -14,7 +16,31 @@ const StoryComponent = () => {
             modules={[Navigation]}
           spaceBetween={15}
           slidesPerView={6}
-          navigation={{ clickable: true }}
+          navigation={{ 
+            clickable: true,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+           }}
+          breakpoints={{
+            360: {
+              slidesPerView: 5,
+            },
+            640: {
+              slidesPerView: 6,
+            },
+            768: {
+              slidesPerView: 6,
+            },
+            800: {
+              slidesPerView: 6,
+            },
+            1200: {
+              slidesPerView: 6,
+            },
+            1400: {
+              slidesPerView: 6,
+            },
+          }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
@@ -88,6 +114,9 @@ const StoryComponent = () => {
                 </a>
             </div>
           </SwiperSlide>
+
+          <button onClick={() => swiper.slideNext()} className="swiper-button-next"><img src={require("../assets/images/icons/right-arrow.png")} class="img-fluid"
+                  width="50px" /></button>
         </Swiper>
       </div>
       <StoryModal />
