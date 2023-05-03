@@ -24,7 +24,7 @@ const App = () => {
       <HeaderComponent />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/message" element={<MessageComponent />} />
           <Route path="/setting" element={<SettingComponent />} />
           <Route path="/explore" element={<ExploreComponent />} />

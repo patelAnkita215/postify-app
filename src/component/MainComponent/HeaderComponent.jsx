@@ -9,7 +9,7 @@ const HeaderComponent = () => {
                 <nav className="navbar navbar-expand-md">
                 <div className="container-md">
                     <a className="navbar-brand p-0" href="/">
-                        <img src={require("../../assets/images/imgs/logo.png")} alt="" className="img-fluid" width="100px" />
+                        <img src={require("../../assets/images/imgs/logo.png")} alt="" className="img-fluid" />
                     </a>
 
                     <div className="center-part-content d-flex align-items-center">
