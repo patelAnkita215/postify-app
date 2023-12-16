@@ -348,6 +348,7 @@
   .header .menu-dropdown .dropdown-menu {width: 200px;padding: 20px 18px;}
   .header .menu-dropdown .dropdown-menu {right: -20px;}
   .document-verification {padding: 30px;}
+  .post-list-box .post-image {height: auto;}
 }
 
 @media screen and (max-width: 630.59px) {
@@ -406,6 +407,7 @@
   .header .search-dropdown .dropdown-menu {width: 270px;right: -110px;}
   .other-profile-container .profile-follow .follow-number {margin: 0 15px;}
   .center-box .clip-button { padding-left: 0;}
+  .header .navbar-brand {width: 110px;}
 }
 @media screen and (max-width: 320.59px) { 
   .header .navbar-brand {width: 100px;}

@@ -1,5 +1,6 @@
 import React from "react";
 import GoLiveCommentModal from "../Modal/GoLiveCommentModal";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
 
@@ -8,9 +9,9 @@ const HeaderComponent = () => {
             <header className="header">
                 <nav className="navbar navbar-expand-md">
                 <div className="container-md">
-                    <a className="navbar-brand p-0" href="/">
+                    <Link className="navbar-brand p-0" to="/">
                         <img src={require("../../assets/images/imgs/logo.png")} alt="" className="img-fluid" />
-                    </a>
+                    </Link>
 
                     <div className="center-part-content d-flex align-items-center">
                     <div className="search-container">
@@ -58,40 +59,40 @@ const HeaderComponent = () => {
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="menu-dropdown">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="index.html">
+                            <Link className="nav-link active" to="/">
                             <img src={require("../../assets/images/icons/ico_home.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_home_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Home Feed</span></a>
+                            <span>Home Feed</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="messsage.html">
+                            <Link className="nav-link" to="/messsage">
                             <img src={require("../../assets/images/icons/ico_chat.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_chat_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Messages</span></a>
+                            <span>Messages</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="explore.html">
+                            <Link className="nav-link" to="/explore">
                             <img src={require("../../assets/images/icons/ico_map.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_map_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Explore</span></a>
+                            <span>Explore</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="notification.html">
+                            <Link className="nav-link" to="/notification">
                             <img src={require("../../assets/images/icons/ico_notification.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_notification_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Notifications</span></a>
+                            <span>Notifications</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="#">
                             <img src={require("../../assets/images/icons/ico_bookmark.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_bookmark_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Favorites</span></a>
+                            <span>Favorites</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="settings.html">
+                            <Link className="nav-link" to="/settings">
                             <img src={require("../../assets/images/icons/ico_setting.png")} alt="" className="img-fluid img-icon" />
                             <img src={require("../../assets/images/icons/ico_setting_blue.png")} alt="" className="img-fluid img-icon-active" />
-                            <span>Settings</span></a>
+                            <span>Settings</span></Link>
                         </li>
                         </ul>
                     </div>
@@ -105,9 +106,8 @@ const HeaderComponent = () => {
                             <span className="user-name">Scarlett Doe</span>
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a className="dropdown-item" href="#">Action</a></li>
-                            <li><a className="dropdown-item" href="#">Another action</a></li>
-                            <li><a className="dropdown-item" href="#">Something else here</a></li>
+                            <li><Link className="dropdown-item" to="#">My Profile</Link></li>
+                            <li><Link className="dropdown-item" to="#">Logout</Link></li>
                         </ul>
                         </div>
                     </div>

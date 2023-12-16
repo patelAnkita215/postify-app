@@ -8,7 +8,6 @@ import NotificationComponent from "./component/MainComponent/NotificationCompone
 import HeaderComponent from "./component/MainComponent/HeaderComponent";
 import ProfileComponent from "./component/MainComponent/ProfileComponent";
 
-
 // const App = () => {
 //   return (
 //     <>
@@ -21,8 +20,9 @@ import ProfileComponent from "./component/MainComponent/ProfileComponent";
 const App = () => {
   return (
     <>
-      <HeaderComponent />
       <BrowserRouter>
+        <HeaderComponent />
+
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/message" element={<MessageComponent />} />

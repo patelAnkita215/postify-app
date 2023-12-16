@@ -20,6 +20,9 @@ const StoryComponent = () => {
             prevEl: ".swiper-button-prev",
            }}
           breakpoints={{
+            250: {
+              slidesPerView: 4,
+            },
             360: {
               slidesPerView: 5,
             },
