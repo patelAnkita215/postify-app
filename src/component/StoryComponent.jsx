@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import StoryModal from "./Modal/StoryModal";
 
 const StoryComponent = () => {
-
-  const swiper = useSwiper();
+  const [swiper, setSwiper] = React.useState(null);
+  // const swiper = useSwiper();
   return (
     <>
       <div className="story-slider">
-        <div className="right-side-blur"></div>
+        {/* <div className="right-side-blur"></div> */}
         <Swiper
             modules={[Navigation]}
           spaceBetween={15}
@@ -40,8 +40,9 @@ const StoryComponent = () => {
             },
           }}
           onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          onSwiper={(swiper) => setSwiper(swiper)}
         >
+          <div className="right-side-blur"></div>
           <SwiperSlide>
             <div className="swiper-slide">
                 <a className="story">
@@ -56,6 +57,16 @@ const StoryComponent = () => {
             <div className="swiper-slide">
                 <a className="story" data-bs-toggle="modal" data-bs-target="#storyModal">
                     <div className="profile add-story">
+                      <img src={require("../assets/images/imgs/user1.png")} alt="" />
+                    </div>
+                    <div className="title">Ruby Baker</div>
+                </a>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="swiper-slide">
+                <a className="story" data-bs-toggle="modal" data-bs-target="#storyModal">
+                    <div className="profile">
                       <img src={require("../assets/images/imgs/user1.png")} alt="" />
                     </div>
                     <div className="title">Ruby Baker</div>

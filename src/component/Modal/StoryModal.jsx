@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 const StoryModal = () => {
 
-    const swiper = useSwiper();
+    const [swiperModal, setSwiperModal] = React.useState(null);
+    // const swiper = useSwiper();
 
     return(
         <>
@@ -46,7 +47,7 @@ const StoryModal = () => {
                             }}
                             pagination={{ clickable: true,el: ".swiper-pagination", }}
                             onSlideChange={() => console.log("slide change")}
-                            onSwiper={(swiper) => console.log(swiper)}
+                            onSwiper={(swiperModal) => setSwiperModal(swiperModal)}
                         >
                             <SwiperSlide>
                                 <div className="swiper-slide">
@@ -60,8 +61,8 @@ const StoryModal = () => {
                             </SwiperSlide>
                         </Swiper>
                         </div>
-                        <button onClick={() => swiper.slideNext()} className="swiper-button-next"></button>
-                        <button onClick={() => swiper.slidePrev()} className="swiper-button-prev"></button>
+                        <button onClick={() => swiperModal.slideNext()} className="swiper-button-next"></button>
+                        <button onClick={() => swiperModal.slidePrev()} className="swiper-button-prev"></button>
                     </div>
                 </div>
             </div>
